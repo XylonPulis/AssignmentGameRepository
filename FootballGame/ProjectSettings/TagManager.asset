@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Boundaries
+  - Ball
+  - Player2Score
+  - Player1Score
   layers:
   - Default
   - TransparentFX
