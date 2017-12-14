@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class POneMovement : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    float velocity = 0.3f;
+    
+    void Start () {
 		
 	}
 	
-	// Update is called once per frame
 	void Update () {
-		
-	}
+
+        Vector3 movement = transform.position;
+
+        if (Input.GetKey(KeyCode.W))
+            movement.y += velocity;
+
+        if (Input.GetKey(KeyCode.S))
+            movement.y -= velocity;
+
+        movement.y = Mathf.Clamp(movement.y, -4f, 4f);
+        transform.position = movement;
+    }
 }
